@@ -1,0 +1,108 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 327 100% 97%;
+  --foreground: 327 100% 20%;
+  --card: 0 0% 100%;
+  --card-foreground: 327 100% 20%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 327 100% 20%;
+  --primary: 327 100% 60%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 270 100% 60%;
+  --secondary-foreground: 0 0% 100%;
+  --muted: 327 30% 95%;
+  --muted-foreground: 327 30% 40%;
+  --accent: 327 100% 60%;
+  --accent-foreground: 0 0% 100%;
+  --destructive: 0 100% 50%;
+  --destructive-foreground: 0 0% 100%;
+  --border: 327 30% 90%;
+  --input: 327 30% 90%;
+  --ring: 327 100% 60%;
+  --radius: 1rem;
+}
+
+body {
+  background-color: #fdf2f8;
+  color: #831843;
+  font-family: "Quicksand", sans-serif;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(252, 231, 243, 0.5);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(249, 168, 212, 0.7);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(244, 114, 182, 0.8);
+}
+
+/* Gradient text animation */
+@keyframes gradient-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradient-shift 5s ease infinite;
+}
+
+/* Floating elements animation */
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.float {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Heart beat animation */
+@keyframes heartbeat {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.1);
+  }
+  50% {
+    transform: scale(1);
+  }
+  75% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.heartbeat {
+  animation: heartbeat 1.5s infinite;
+}
